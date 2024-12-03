@@ -13,3 +13,4 @@ F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Repository\obj\Debug\net8.0\Ta
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Repository\obj\Debug\net8.0\refint\Talabat.Repository.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Repository\obj\Debug\net8.0\Talabat.Repository.pdb
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Repository\obj\Debug\net8.0\ref\Talabat.Repository.dll
+F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Repository\obj\Debug\net8.0\Talabat.Repository.sourcelink.json

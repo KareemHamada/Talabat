@@ -174,3 +174,4 @@ F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\Talabat.
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\Talabat.Repository.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\Talabat.Repository.pdb
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\Talabat.Core.pdb
+F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\obj\Debug\net8.0\Talabat.Apis.sourcelink.json

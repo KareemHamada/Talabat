@@ -31,18 +31,27 @@ var Services = Scope.ServiceProvider;
 var LoggerFactory = Services.GetRequiredService<ILoggerFactory>();
 try
 {
-   
+
     // Ask CLR for creating object from DbContext Explicitly
-    var DbContext = Services.GetRequiredService<StoreContext>();
+    var dbContext = Services.GetRequiredService<StoreContext>();
     // Update-database
-    await DbContext.Database.MigrateAsync();
-}catch(Exception ex)
+    await dbContext.Database.MigrateAsync();
+
+    // Data Seeding
+    await StoreContextSeed.SeedAsync(dbContext);
+
+}
+catch (Exception ex)
 {
     var Logger = LoggerFactory.CreateLogger<Program>();
-    Logger.LogError(ex,"An error occured during appling the migration");
+    Logger.LogError(ex, "An error occured during appling the migration");
 }
 
 //Scope.Dispose();
+#endregion
+
+
+#region Data Seeding
 #endregion
 
 
