@@ -1,5 +1,11 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Writers;
+using Talabat.Apis.Errors;
+using Talabat.Apis.Extensions;
+using Talabat.Apis.Helpers;
+using Talabat.Apis.Middlewares;
+using Talabat.Core.Repositories;
+using Talabat.Repository;
 using Talabat.Repository.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,7 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 #region Configure service
 // Add services to the container.
-builder.Services.AddControllers();
+builder.Services.AddControllers(); 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -15,6 +21,13 @@ builder.Services.AddDbContext<StoreContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+
+
+builder.Services.AddApplicationServices();
+
+
+
 #endregion
 
 
@@ -56,11 +69,16 @@ catch (Exception ex)
 
 
 #region Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseMiddleware<ExceptionMiddleware>();
+    app.UseSwaggerMiddlewares();
 }
+
+app.UseStatusCodePagesWithReExecute("/errors/{0}");
+
+app.UseStaticFiles();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

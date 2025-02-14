@@ -9,3 +9,4 @@ F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Core\obj\Debug\net8.0\Talabat.
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Core\obj\Debug\net8.0\refint\Talabat.Core.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Core\obj\Debug\net8.0\Talabat.Core.pdb
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Core\obj\Debug\net8.0\ref\Talabat.Core.dll
+F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Core\obj\Debug\net8.0\Talabat.Core.sourcelink.json
