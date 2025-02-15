@@ -1,5 +1,4 @@
-﻿using Talabat.Apis.DTOS;
-
+﻿
 namespace Talabat.Apis.Helpers
 {
     public class Pagination<T>

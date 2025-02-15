@@ -1,11 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Talabat.Core.Entities;
-using Talabat.Core.Repositories;
-using Talabat.Core;
-using Talabat.Core.Specifications;
-
-namespace Talabat.Apis.Controllers
+﻿namespace Talabat.Apis.Controllers
 {
 
     public class EmployeeController : APIBaseController

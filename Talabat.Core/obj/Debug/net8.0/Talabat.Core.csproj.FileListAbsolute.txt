@@ -10,3 +10,4 @@ F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Core\obj\Debug\net8.0\refint\T
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Core\obj\Debug\net8.0\Talabat.Core.pdb
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Core\obj\Debug\net8.0\ref\Talabat.Core.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Core\obj\Debug\net8.0\Talabat.Core.sourcelink.json
+F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Core\obj\Debug\net8.0\Talabat.Core.csproj.AssemblyReference.cache

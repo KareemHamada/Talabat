@@ -1,8 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Talabat.Apis.Errors;
-
-namespace Talabat.Apis.Controllers
+﻿namespace Talabat.Apis.Controllers
 {
 
     [Route("errors/{code}")]

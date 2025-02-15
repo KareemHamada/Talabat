@@ -1,8 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Talabat.Apis.Errors;
-using Talabat.Apis.Helpers;
-using Talabat.Core.Repositories;
-using Talabat.Repository;
+﻿
 
 namespace Talabat.Apis.Extensions
 {

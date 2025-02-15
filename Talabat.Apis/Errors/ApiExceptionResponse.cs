@@ -1,5 +1,4 @@
-﻿using Microsoft.Identity.Client;
-
+﻿
 namespace Talabat.Apis.Errors
 {
     public class ApiExceptionResponse : APIResponse

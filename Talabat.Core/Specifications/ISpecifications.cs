@@ -1,6 +1,4 @@
-﻿using System.Linq.Expressions;
-using Talabat.Core.Entities;
-
+﻿
 namespace Talabat.Core.Specifications
 {
     public interface ISpecifications<T> where T : BaseEntity

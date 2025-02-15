@@ -1,0 +1,16 @@
+﻿global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.EntityFrameworkCore;
+global using Talabat.Apis.Errors;
+global using Talabat.Apis.Extensions;
+global using Talabat.Apis.Helpers;
+global using Talabat.Apis.Middlewares;
+global using Talabat.Core.Repositories;
+global using Talabat.Repository;
+global using Talabat.Repository.Data;
+global using Talabat.Core.Entities;
+global using Talabat.Core;
+global using Talabat.Core.Specifications;
+global using System.Net;
+global using System.Text.Json;
+global using AutoMapper;
+global using Talabat.Apis.DTOS;

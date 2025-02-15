@@ -1,5 +1,4 @@
-﻿using Talabat.Core.Entities;
-
+﻿
 namespace Talabat.Apis.DTOS
 {
     public class ProdcutToReturnDto

@@ -1,12 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Talabat.Core.Entities;
-using Talabat.Core.Repositories;
-using Talabat.Core;
-using AutoMapper;
-using Talabat.Apis.DTOS;
-using Talabat.Apis.Errors;
-using Talabat.Core.Specifications;
-using Talabat.Apis.Helpers;
+﻿
+
 
 namespace Talabat.Apis.Controllers
 {

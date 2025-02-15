@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Diagnostics;
-
+﻿
 namespace Talabat.Apis.Errors
 {
     public class APIResponse

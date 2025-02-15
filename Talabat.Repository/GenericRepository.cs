@@ -1,9 +1,4 @@
 ﻿
-using Microsoft.EntityFrameworkCore;
-using Talabat.Core.Entities;
-using Talabat.Core.Repositories;
-using Talabat.Core.Specifications;
-using Talabat.Repository.Data;
 
 namespace Talabat.Repository
 {

@@ -178,3 +178,5 @@ F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\obj\Debug\net8.0\Talabat.
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\AutoMapper.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\Talabat.Apis.staticwebassets.runtime.json
+F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\StackExchange.Redis.dll

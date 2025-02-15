@@ -1,8 +1,4 @@
 ﻿
-using Microsoft.EntityFrameworkCore;
-using Talabat.Core.Entities;
-using Talabat.Core.Specifications;
-
 namespace Talabat.Repository
 {
     public static class SpecificationEvalutor<T> where T : BaseEntity
