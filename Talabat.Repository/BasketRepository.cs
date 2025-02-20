@@ -1,29 +1,38 @@
 ﻿
 
+using System.Text.Json;
+using StackExchange.Redis;
+
 namespace Talabat.Repository
 {
     public class BasketRepository : IBasketRepository
     {
-
-        public BasketRepository()
+        private readonly IDatabase _database;
+        public BasketRepository(IConnectionMultiplexer redis)
         {
-            
+            _database = redis.GetDatabase();
         }
 
 
         public Task<bool> DeleteBasketAsync(string BasketId)
         {
-            throw new NotImplementedException();
+            return _database.KeyDeleteAsync(BasketId);
         }
 
-        public Task<CutomerBasket> GetBasketAsync(string BasketId)
+        public async Task<CutomerBasket?> GetBasketAsync(string BasketId)
         {
-            throw new NotImplementedException();
+            var Basket = await _database.StringGetAsync(BasketId);
+            return Basket.IsNullOrEmpty ? null : JsonSerializer.Deserialize<CutomerBasket>(Basket);
         }
 
-        public Task<CutomerBasket> UpdateBasketAsync(CutomerBasket Basket)
+        public async Task<CutomerBasket?> UpdateBasketAsync(CutomerBasket Basket)
         {
-            throw new NotImplementedException();
+            var JsonBasket = JsonSerializer.Serialize(Basket);
+            var IsCreatedOrUpdated = await _database.StringSetAsync(Basket.Id, JsonBasket, TimeSpan.FromDays(1));
+
+            if (!IsCreatedOrUpdated) return null;
+
+            return await GetBasketAsync(Basket.Id);
         }
     }
 }

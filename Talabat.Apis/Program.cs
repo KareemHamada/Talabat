@@ -1,4 +1,7 @@
+using Microsoft.AspNetCore.Identity;
 using StackExchange.Redis;
+using Talabat.Core.Entities.Identity;
+using Talabat.Repository.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +17,11 @@ builder.Services.AddDbContext<StoreContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+builder.Services.AddDbContext<AppIdentityDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("IdentityConnection"));
+});
+
 
 builder.Services.AddSingleton<IConnectionMultiplexer>(options =>
 {
@@ -22,8 +30,7 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(options =>
 
 });
 builder.Services.AddApplicationServices();
-
-
+builder.Services.AddIdentiyServies();
 
 #endregion
 
@@ -47,7 +54,16 @@ try
     // Update-database
     await dbContext.Database.MigrateAsync();
 
+
+    // for identity
+    var IdentitydbContext = Services.GetRequiredService<AppIdentityDbContext>();
+    await IdentitydbContext.Database.MigrateAsync();
+
     // Data Seeding
+    var UserManager = Services.GetRequiredService<UserManager<AppUser>>();
+
+    await AppIdentityDbContextSeed.SeedUserAsync(UserManager);
+
     await StoreContextSeed.SeedAsync(dbContext);
 
 }
@@ -58,10 +74,6 @@ catch (Exception ex)
 }
 
 //Scope.Dispose();
-#endregion
-
-
-#region Data Seeding
 #endregion
 
 
