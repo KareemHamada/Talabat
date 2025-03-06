@@ -14,3 +14,6 @@ global using System.Net;
 global using System.Text.Json;
 global using AutoMapper;
 global using Talabat.Apis.DTOS;
+global using Microsoft.AspNetCore.Identity;
+global using Talabat.Core.Entities.Identity;
+global using System.ComponentModel.DataAnnotations;

@@ -1,8 +1,5 @@
 ﻿
 
-using System.Text.Json;
-using StackExchange.Redis;
-
 namespace Talabat.Repository
 {
     public class BasketRepository : IBasketRepository
@@ -19,13 +16,13 @@ namespace Talabat.Repository
             return _database.KeyDeleteAsync(BasketId);
         }
 
-        public async Task<CutomerBasket?> GetBasketAsync(string BasketId)
+        public async Task<CustomerBasket?> GetBasketAsync(string BasketId)
         {
             var Basket = await _database.StringGetAsync(BasketId);
-            return Basket.IsNullOrEmpty ? null : JsonSerializer.Deserialize<CutomerBasket>(Basket);
+            return Basket.IsNullOrEmpty ? null : JsonSerializer.Deserialize<CustomerBasket>(Basket);
         }
 
-        public async Task<CutomerBasket?> UpdateBasketAsync(CutomerBasket Basket)
+        public async Task<CustomerBasket?> UpdateBasketAsync(CustomerBasket Basket)
         {
             var JsonBasket = JsonSerializer.Serialize(Basket);
             var IsCreatedOrUpdated = await _database.StringSetAsync(Basket.Id, JsonBasket, TimeSpan.FromDays(1));

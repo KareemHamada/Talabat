@@ -1,6 +1,4 @@
-﻿using System.Text.Json;
-using Talabat.Core.Entities;
-
+﻿
 namespace Talabat.Repository.Data
 {
     public static class StoreContextSeed
@@ -59,6 +57,23 @@ namespace Talabat.Repository.Data
                     if (Products is not null && Products.Any())
                     {
                         await dbContext.Products.AddRangeAsync(Products);
+                        await dbContext.SaveChangesAsync();
+                    }
+                }
+
+                // Delivery methods 
+                if (!dbContext.DeliveryMethods.Any())
+                {
+                    //read Delivery Methods from file as string
+                    var DeliveryMethodsData = await File.ReadAllTextAsync("../Talabat.Repository/Data/DataSeed/delivery.json");
+
+                    // transform into C# objects
+                    var DeliveryMethods = JsonSerializer.Deserialize<List<DeliveryMethod>>(DeliveryMethodsData);
+
+                    // add to db & save
+                    if (DeliveryMethods is not null && DeliveryMethods.Any())
+                    {
+                        await dbContext.DeliveryMethods.AddRangeAsync(DeliveryMethods);
                         await dbContext.SaveChangesAsync();
                     }
                 }

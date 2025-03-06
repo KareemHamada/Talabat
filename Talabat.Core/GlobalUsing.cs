@@ -2,3 +2,4 @@
 global using Talabat.Core.Specifications;
 global using System.Linq.Expressions;
 global using Microsoft.AspNetCore.Identity;
+global using Talabat.Core.Entities.Identity;

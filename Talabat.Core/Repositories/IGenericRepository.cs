@@ -7,6 +7,12 @@ namespace Talabat.Core.Repositories
         #region Without specifications
         Task<IReadOnlyList<T>> GetAllAsync();
         Task<T> GetByIdAsync(int id);
+
+
+        Task AddAsync(T Item);
+        void Update(T Item);
+        void Delete(T Item);
+
         #endregion
 
 
@@ -18,6 +24,8 @@ namespace Talabat.Core.Repositories
         Task<int> GetCountWithSpecAsync(ISpecifications<T> Spec);
 
         #endregion
+
+        
 
     }
 }

@@ -10,3 +10,7 @@ F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Service\obj\Debug\net8.0\refin
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Service\obj\Debug\net8.0\Talabat.Service.pdb
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Service\obj\Debug\net8.0\ref\Talabat.Service.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Service\obj\Debug\net8.0\Talabat.Service.sourcelink.json
+F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Service\bin\Debug\net8.0\Talabat.Core.dll
+F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Service\bin\Debug\net8.0\Talabat.Core.pdb
+F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Service\obj\Debug\net8.0\Talabat.Service.csproj.AssemblyReference.cache
+F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Service\obj\Debug\net8.0\Talabat..89B18B2E.Up2Date

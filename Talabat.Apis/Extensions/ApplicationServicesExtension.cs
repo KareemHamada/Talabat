@@ -1,5 +1,8 @@
 ﻿
 
+using Talabat.Core.Services;
+using Talabat.Service;
+
 namespace Talabat.Apis.Extensions
 {
     public static class ApplicationServicesExtension
@@ -32,7 +35,10 @@ namespace Talabat.Apis.Extensions
             });
 
 
+            Services.AddScoped<IUnitOfWork,UnitOfWork>();
+            Services.AddScoped<IOrderService,OrderService>();
             return Services;
+
 
         }
     }

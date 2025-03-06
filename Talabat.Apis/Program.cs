@@ -30,7 +30,7 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(options =>
 
 });
 builder.Services.AddApplicationServices();
-builder.Services.AddIdentiyServies();
+builder.Services.AddIdentiyServies(builder.Configuration);
 
 #endregion
 
@@ -90,6 +90,7 @@ app.UseStatusCodePagesWithReExecute("/errors/{0}");
 app.UseStaticFiles();
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
