@@ -12,10 +12,12 @@ namespace Talabat.Apis.Controllers
     {
         private readonly IOrderService _orderService;
         private readonly IMapper _mapper;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public OrdersController(IOrderService orderService,IMapper mapper) {
+        public OrdersController(IOrderService orderService,IMapper mapper,IUnitOfWork unitOfWork) {
             _orderService = orderService;
             this._mapper = mapper;
+            this._unitOfWork = unitOfWork;
         }
 
         [ProducesResponseType(typeof(Core.Entities.Order_Aggregate.Order), StatusCodes.Status200OK)]
@@ -25,7 +27,7 @@ namespace Talabat.Apis.Controllers
         public async Task<ActionResult<Core.Entities.Order_Aggregate.Order>> CreateOrder(OrderDto orderDto)
         {
             var BuyerEmail = User.FindFirstValue(ClaimTypes.Email);
-            var MappedAddress = _mapper.Map<AddressDto,Core.Entities.Order_Aggregate.Address>(orderDto.ShippingAddress);
+            var MappedAddress = _mapper.Map<AddressDto,Core.Entities.Order_Aggregate.Address>(orderDto.ShipToAddress);
 
             var Order = await _orderService.CreateOrderAsync(BuyerEmail, orderDto.BasketId, orderDto.DeliveryMethodId, MappedAddress);
             if (Order is null) return BadRequest(new APIResponse(400, "There is a problem with your order"));
@@ -66,6 +68,17 @@ namespace Talabat.Apis.Controllers
             var MappedOrder = _mapper.Map<Core.Entities.Order_Aggregate.Order, OrderToReturnDto>(order);
 
             return Ok(MappedOrder);
+        }
+
+        [ProducesResponseType(typeof(IReadOnlyList<DeliveryMethod>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(APIResponse), StatusCodes.Status404NotFound)]
+        [HttpGet("DeliveryMethods")]
+        public async Task<ActionResult<IReadOnlyList<DeliveryMethod>>> GetDeliveryMethods()
+        {
+            var deliverMethods = await _unitOfWork.Repository<DeliveryMethod>().GetAllAsync();
+            if (deliverMethods is null) return NotFound(new APIResponse(404, "There is no delivery methods"));
+
+            return Ok(deliverMethods);
         }
     }
 }

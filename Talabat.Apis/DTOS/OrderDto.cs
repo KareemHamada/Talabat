@@ -7,7 +7,7 @@
         [Required]
         public int DeliveryMethodId { get; set; }
         [Required]
-        public AddressDto ShippingAddress { get; set; }
+        public AddressDto ShipToAddress { get; set; }
 
     }
 }

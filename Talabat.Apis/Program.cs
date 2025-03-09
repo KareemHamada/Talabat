@@ -31,7 +31,15 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(options =>
 });
 builder.Services.AddApplicationServices();
 builder.Services.AddIdentiyServies(builder.Configuration);
-
+builder.Services.AddCors(Options =>
+{
+    Options.AddPolicy("MyPolicy", options =>
+    {
+        options.AllowAnyHeader();
+        options.AllowAnyMethod();
+        options.WithOrigins(builder.Configuration["FrontBaseUrl"]);
+    });
+});
 #endregion
 
 
@@ -86,13 +94,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseStatusCodePagesWithReExecute("/errors/{0}");
-
 app.UseStaticFiles();
+app.UseCors("MyPolicy");
 app.UseHttpsRedirection();
-
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
 #endregion
 

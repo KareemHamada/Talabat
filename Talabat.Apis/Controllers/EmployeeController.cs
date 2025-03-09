@@ -25,7 +25,7 @@
         {
             var Spec = new EmployeeWithDepartmentSpecifications(id);
 
-            var employee = await _employeeRepo.GetByIdAsyncWithSpecifications(Spec);
+            var employee = await _employeeRepo.GetEntityAsyncWithSpecifications(Spec);
             return Ok(employee);
         }
     }

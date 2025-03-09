@@ -24,7 +24,6 @@ namespace Talabat.Apis.Controllers
 
 
         // Get All Products
-        [Authorize]
         [HttpGet]
         public async Task<ActionResult<Pagination<ProdcutToReturnDto>>> GetProducts([FromQuery]ProductSpecParams Params)
         {
@@ -55,7 +54,7 @@ namespace Talabat.Apis.Controllers
         {
             var Spec = new ProdcutWithBrandAndTypeSpecifications(id);
 
-            var product = await _productRepo.GetByIdAsyncWithSpecifications(Spec);
+            var product = await _productRepo.GetEntityAsyncWithSpecifications(Spec);
             if(product is null)
                 return NotFound(new APIResponse(404));
 

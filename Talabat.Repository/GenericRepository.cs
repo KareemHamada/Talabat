@@ -24,14 +24,13 @@ namespace Talabat.Repository
         }
         #endregion 
 
-
         #region With specifications
         public async Task<IReadOnlyList<T>> GetAllAsyncWithSpecifications(ISpecifications<T> Spec)
         {
             return await ApplySpecification(Spec).ToListAsync();
         }
 
-        public async Task<T> GetByIdAsyncWithSpecifications(ISpecifications<T> Spec)
+        public async Task<T> GetEntityAsyncWithSpecifications(ISpecifications<T> Spec)
         {
             return await ApplySpecification(Spec).FirstOrDefaultAsync();
         } 

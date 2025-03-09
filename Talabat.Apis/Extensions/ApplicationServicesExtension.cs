@@ -1,6 +1,4 @@
-﻿
-
-using Talabat.Core.Services;
+﻿using Talabat.Core.Services;
 using Talabat.Service;
 
 namespace Talabat.Apis.Extensions
@@ -37,6 +35,8 @@ namespace Talabat.Apis.Extensions
 
             Services.AddScoped<IUnitOfWork,UnitOfWork>();
             Services.AddScoped<IOrderService,OrderService>();
+            Services.AddScoped<IPaymentService, PaymentService>();
+
             return Services;
 
 

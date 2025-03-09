@@ -10,12 +10,13 @@ namespace Talabat.Service
     {
         private readonly IBasketRepository _basketRepository;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IPaymentService _paymentService;
 
-        public OrderService(IBasketRepository basketRepository,IUnitOfWork unitOfWork)
+        public OrderService(IBasketRepository basketRepository,IUnitOfWork unitOfWork,IPaymentService paymentService)
         {
             _basketRepository = basketRepository;
             _unitOfWork = unitOfWork;
-
+            this._paymentService = paymentService;
         }
         public async Task<Order?> CreateOrderAsync(string BuyerEmail, string BasketId, int DeliveryMethodId, Core.Entities.Order_Aggregate.Address ShippingAddress)
         {
@@ -43,7 +44,14 @@ namespace Talabat.Service
             var DeliveryMethod = await _unitOfWork.Repository<DeliveryMethod>().GetByIdAsync(DeliveryMethodId);
 
             //5.Create Order
-            var Order = new Order(BuyerEmail, ShippingAddress, DeliveryMethod, OrderItems, SubTotal);
+            var Spec = new OrderWithPaymentIntentIdSpec(Basket.PaymentIntentId);
+            var ExOrder = await _unitOfWork.Repository<Order>().GetEntityAsyncWithSpecifications(Spec);
+            if(ExOrder != null)
+            {
+                _unitOfWork.Repository<Order>().Delete(ExOrder);
+                await _paymentService.CreateOrUpdatePaymentIntent(BasketId);
+            }
+            var Order = new Order(BuyerEmail, ShippingAddress, DeliveryMethod, OrderItems, SubTotal,Basket.PaymentIntentId);
 
             //6.Add Order Locally
             await _unitOfWork.Repository<Order>().AddAsync(Order);
@@ -61,15 +69,15 @@ namespace Talabat.Service
 
         public async Task<Order?> GetOrderByIdForSpecificUserAsync(string BuyerEmail, int OrderId)
         {
-            var spec = new OrdreSpecifications(BuyerEmail,OrderId);
-            var Order = await _unitOfWork.Repository<Order>().GetByIdAsyncWithSpecifications(spec);
+            var spec = new OrderSpecifications(BuyerEmail,OrderId);
+            var Order = await _unitOfWork.Repository<Order>().GetEntityAsyncWithSpecifications(spec);
 
             return Order;
         }
 
         public async Task<IReadOnlyList<Order>> GetOrdersForSpecificUserAsync(string BuyerEmail)
         {
-            var OrderSpec = new OrdreSpecifications(BuyerEmail);
+            var OrderSpec = new OrderSpecifications(BuyerEmail);
             var Orders = await _unitOfWork.Repository<Order>().GetAllAsyncWithSpecifications(OrderSpec);
 
             return Orders;

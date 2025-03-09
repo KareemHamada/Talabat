@@ -70,7 +70,6 @@ F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\Microsof
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
-F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\Mono.TextTemplating.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\System.ClientModel.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\System.CodeDom.dll
@@ -81,17 +80,14 @@ F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\System.C
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\System.Composition.TypedParts.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
-F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\System.Drawing.Common.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\System.Formats.Asn1.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\System.IO.Pipelines.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\System.Memory.Data.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\System.Runtime.Caching.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
-F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\System.Security.Permissions.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\System.Text.Encodings.Web.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\System.Text.Json.dll
-F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\System.Windows.Extensions.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -163,13 +159,8 @@ F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\runtimes
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
-F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
-F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
-F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\Talabat.Core.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\Talabat.Repository.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\Talabat.Repository.pdb
@@ -188,3 +179,5 @@ F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\Microsof
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\Talabat.Service.dll
 F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\Talabat.Service.pdb
+F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\Newtonsoft.Json.dll
+F:\Tech-X\Route\Projects\Talabat.Solution\Talabat.Apis\bin\Debug\net8.0\Stripe.net.dll
